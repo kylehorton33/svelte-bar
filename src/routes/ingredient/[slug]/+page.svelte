@@ -3,8 +3,10 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
+	import img from "$lib/assets/campari.jpeg";
+
 	let percentRemaining = data.ingredient.quantityRemaining * 100;
-	$: volume = Math.round(percentRemaining * data.ingredient.volume / 1000)*10;
+	$: volume = Math.round((percentRemaining * data.ingredient.volume) / 1000) * 10;
 </script>
 
 <div class="ingredient-header">
@@ -14,8 +16,9 @@
 	{/if}
 </div>
 
-<div id="image" />
-
+<div id="image">
+	<img src={img} alt="bottle" />
+</div>
 
 <div id="quantity">
 	<input
@@ -26,7 +29,7 @@
 		class="slider"
 		id="quantity-slider"
 	/>
-		{volume} mL
+	{volume} mL
 </div>
 
 <div id="drinks-list">
@@ -38,9 +41,14 @@
 
 <style>
 	#image {
-		height: 16rem;
-		width: 100%;
-		background-color: blue;
+		height: 14rem;
+		display: flex;
+		justify-content: space-around;
+	}
+	img {
+		width: auto;
+		height: 100%;
+		opacity: 0.4;
 	}
 	#quantity {
 		display: inline-block;

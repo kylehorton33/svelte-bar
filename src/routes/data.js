@@ -1,5 +1,5 @@
 export const ingredients = [
-    { slug: 'campari', title: 'Campari', subtitle: '', volume: 750, quantityRemaining: 0.9 },
+    { slug: 'campari', title: 'Campari', subtitle: '', volume: 750, quantityRemaining: 0.9, imagePath: "campari.jpeg" },
     { slug: 'sweet-vermouth', title: 'Sweet Vermouth', subtitle: 'Dolin', volume: 750, quantityRemaining: 0.9 },
     { slug: 'chartreuse', title: 'Chartreuse', subtitle: 'Green', volume: 750, quantityRemaining: 0.9 },
 ]
