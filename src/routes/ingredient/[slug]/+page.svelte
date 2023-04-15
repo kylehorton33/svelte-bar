@@ -3,6 +3,8 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
+	let percentRemaining = data.ingredient.quantityRemaining * 100;
+	$: volume = Math.round(percentRemaining * data.ingredient.volume / 1000)*10;
 </script>
 
 <div class="ingredient-header">
@@ -20,11 +22,11 @@
 		type="range"
 		min="0"
 		max="100"
-		value={data.ingredient.quantityRemaining * 100}
+		bind:value={percentRemaining}
 		class="slider"
 		id="quantity-slider"
 	/>
-		{data.ingredient.volume * data.ingredient.quantityRemaining} mL
+		{volume} mL
 </div>
 
 <div id="drinks-list">
