@@ -1,7 +1,5 @@
 <script>
 	import ListItem from './ListItem.svelte';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import FaSolidWineBottle from 'svelte-icons-pack/fa/FaSolidWineBottle';
 	/**
 	 * @type {{ summaries: any; }}
 	 */
@@ -9,7 +7,6 @@
 </script>
 
 <div id="search-bar">
-	<i> <Icon src={FaSolidWineBottle} /></i>
 	<input type="text" id="drink-search" placeholder="Search bar..." />
 </div>
 
@@ -29,5 +26,7 @@
 	}
 	#search-bar input {
 		width: 100%;
+		height: 1.3rem;
+		border-radius: 1rem;
 	}
 </style>
