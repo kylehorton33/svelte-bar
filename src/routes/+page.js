@@ -1,10 +1,5 @@
-import { ingredients } from './data.js';
+import { getAllIngredients } from '../api'
 
 export function load() {
-	return {
-		summaries: ingredients.map((ingredient) => ({
-			slug: ingredient.slug,
-			title: ingredient.title
-		}))
-	};
+	return getAllIngredients()
 }

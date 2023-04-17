@@ -4,9 +4,13 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 	import img from "$lib/assets/campari.jpeg";
+	import { getIngredients } from "../../../firebase";
 
 	let percentRemaining = data.ingredient.quantityRemaining * 100;
 	$: volume = Math.round((percentRemaining * data.ingredient.volume) / 1000) * 10;
+
+	// let list = getIngredients()
+	// console.log(list);
 </script>
 
 <div class="ingredient-header">
