@@ -1,5 +1,6 @@
 <script>
 	import ListItem from './ListItem.svelte';
+	
 	/**
 	 * @type {{ summaries: any; }}
 	 */
@@ -20,9 +21,6 @@
 	#search-bar {
 		margin: 2rem 3rem;
 		display: flex;
-	}
-	#search-bar i {
-		margin: 0 0.3rem;
 	}
 	#search-bar input {
 		width: 100%;
