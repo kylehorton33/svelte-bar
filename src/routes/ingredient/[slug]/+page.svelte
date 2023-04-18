@@ -3,25 +3,23 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-	import img from "$lib/assets/campari.jpeg";
-	import { getIngredients } from "../../../firebase";
 
-	let percentRemaining = data.ingredient.quantityRemaining * 100;
-	$: volume = Math.round((percentRemaining * data.ingredient.volume) / 1000) * 10;
+	let imagePath = data.imageURL
 
-	// let list = getIngredients()
-	// console.log(list);
+	let percentRemaining = data.quantityRemaining * 100;
+	$: volume = Math.round((percentRemaining * data.volume) / 1000) * 10;
+
 </script>
 
 <div class="ingredient-header">
-	<h1>{data.ingredient.title}</h1>
-	{#if data.ingredient.subtitle}
-		<p>({data.ingredient.subtitle})</p>
+	<h1>{data.name}</h1>
+	{#if data.subtitle}
+		<p>({data.subtitle})</p>
 	{/if}
 </div>
 
 <div id="image">
-	<img src={img} alt="bottle" />
+	<img src={imagePath} alt="bottle" />
 </div>
 
 <div id="quantity">
