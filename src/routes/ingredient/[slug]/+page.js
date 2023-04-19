@@ -1,4 +1,4 @@
-import { getIngredientBySlug, getImageUrlBySlug } from '../../../api'
+import { getIngredientBySlug, getImageUrlBySlug } from '$lib/api'
 
 // @ts-ignore
 export async function load({ params }) {
