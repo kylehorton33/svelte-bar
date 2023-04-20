@@ -1,5 +1,5 @@
 <script>
-	import ListItem from './ListItem.svelte';
+	import ListItem from '$lib/components/ListItem.svelte';
 	
 	/**
 	 * @type {{ summaries: any; }}

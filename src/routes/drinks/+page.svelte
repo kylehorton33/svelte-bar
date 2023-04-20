@@ -1,7 +1,7 @@
 <script>
 	import Icon from 'svelte-icons-pack/Icon.svelte';
     import FaSolidWineGlassAlt from 'svelte-icons-pack/fa/FaSolidWineGlassAlt';
-	import ListItem from "../ListItem.svelte";
+	import ListItem from "$lib/components/ListItem.svelte";
 
 	/**
 	 * @type {{ summaries: any; }}
