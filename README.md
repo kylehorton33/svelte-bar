@@ -37,6 +37,25 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-# Run on Digital Ocean droplet:
+## Run on Digital Ocean droplet:
 
 `PORT=PORT pm2 start build/index.js`
+
+## Setup notes for this app:
+
+- Clone the repo with `git clone https://github.com/kylehorton33/svelte-bar.git`
+- Change directory to repo `cd svelte-bar/`
+- Download the node modules `npm i`
+- Create a firebase config file `src/lib/utils/firebase-cofig.js` and copy firebase config from the project settings page:
+
+```
+    export const firebaseConfig = {
+        apiKey: ",
+        authDomain: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    };
+```
