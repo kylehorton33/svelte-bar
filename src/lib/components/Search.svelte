@@ -1,5 +1,5 @@
 <script>
-	import { Search } from 'carbon-components-svelte';
+	import Search from "carbon-components-svelte/src/Search/Search.svelte";
 
 	export let filterValue = "";
 
