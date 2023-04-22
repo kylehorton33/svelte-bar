@@ -5,7 +5,7 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 // Firebase configuration saved in git-ignored file
-import { firebaseConfig } from "./firebase-config";
+import { firebaseConfig } from './firebase-config';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
