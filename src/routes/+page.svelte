@@ -9,6 +9,6 @@
 
 <ul>
 	{#each data.ingredients as {slug, name}}
-		<ListItem type="ingredient" {slug} {name} />
+		<ListItem link="/ingredient/{slug}" {name} />
 	{/each}
 </ul>

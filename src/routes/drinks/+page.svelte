@@ -19,7 +19,7 @@
 
 <ul>
 	{#each data.summaries as { slug, name }}
-		<ListItem type="drinks" {slug} {name} />
+		<ListItem link="/drinks/{slug}" {name} />
 	{/each}
 </ul>
 

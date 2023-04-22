@@ -1,9 +1,9 @@
 <script>
-    export let type, name, slug;
+    export let link, name;
 </script>
 
 <li>
-    <a href="/{type}/{slug}">{name}</a>
+    <a href="{link}">{name}</a>
 </li>
 
 
