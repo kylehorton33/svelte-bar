@@ -1,25 +1,35 @@
 <script>
+	import { ImageLoader, InlineLoading } from 'carbon-components-svelte';
+
 	// @ts-nocheck
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	let imagePath = data.imageURL
+	let imagePath = data.imageURL;
 
 	let percentRemaining = data.quantityRemaining * 100;
 	$: volume = Math.round((percentRemaining * data.volume) / 1000) * 10;
-
 </script>
+
+<div class="image-container">
+	<ImageLoader
+		fadeIn
+		src={imagePath}
+		alt="bottle of {data.name}"
+		style="height: 100%; width:100%; object-fit: cover;"
+	>
+		<svelte:fragment slot="loading">
+			<InlineLoading description="Loading image..." />
+		</svelte:fragment>
+	</ImageLoader>
+</div>
 
 <div class="ingredient-header">
 	<h1>{data.name}</h1>
 	{#if data.subtitle}
 		<p>({data.subtitle})</p>
 	{/if}
-</div>
-
-<div id="image">
-	<img src={imagePath} alt="bottle" />
 </div>
 
 <div id="quantity">
@@ -42,15 +52,13 @@
 </div>
 
 <style>
-	#image {
-		height: 14rem;
-		display: flex;
-		justify-content: space-around;
-	}
-	img {
-		width: auto;
-		height: 100%;
-		opacity: 0.4;
+	.image-container {
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100%;
+		height: 20rem;
+		background-color: lightgray;
 	}
 	#quantity {
 		display: inline-block;
