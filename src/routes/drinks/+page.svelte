@@ -18,8 +18,8 @@
 </div>
 
 <ul>
-	{#each data.summaries as { slug, title }}
-		<ListItem type="drinks" {slug} {title} />
+	{#each data.summaries as { slug, name }}
+		<ListItem type="drinks" {slug} {name} />
 	{/each}
 </ul>
 
