@@ -1,11 +1,11 @@
 <script>
     export let type;
-    export let title;
+    export let name;
     export let slug;
 </script>
 
 <li>
-    <a href="/{type}/{slug}">{title}</a>
+    <a href="/{type}/{slug}">{name}</a>
 </li>
 
 

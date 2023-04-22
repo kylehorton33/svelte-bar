@@ -8,14 +8,17 @@ import { ref, getDownloadURL } from 'firebase/storage';
 // Return all ingredients from Firestore
 export async function getAllIngredients() {
     /**
-     * @type {{ slug: string; title: any; }[]}
+     * @type {{ slug: string; }[]}
      */
-    let ingredients = []
+    let ingredients = [];
     const querySnapshot = await getDocs(collection(db, "ingredients"));
     querySnapshot.forEach((doc) => {
-        ingredients.push({slug: doc.id, title: doc.data().name})
+        ingredients.push({
+            slug: doc.id,
+            ...doc.data()
+        })
     })
-    return { summaries: ingredients };
+    return { ingredients };
 }
 
 /**

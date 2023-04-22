@@ -1,10 +1,8 @@
 <script>
 	import ListItem from '$lib/components/ListItem.svelte';
 	
-	/**
-	 * @type {{ summaries: any; }}
-	 */
 	export let data;
+	console.log(data.ingredients)
 </script>
 
 <div id="search-bar">
@@ -12,8 +10,8 @@
 </div>
 
 <ul>
-	{#each data.summaries as { slug, title }}
-		<ListItem type="ingredient" {slug} {title} />
+	{#each data.ingredients as {slug, name}}
+		<ListItem type="ingredient" {slug} {name} />
 	{/each}
 </ul>
 
