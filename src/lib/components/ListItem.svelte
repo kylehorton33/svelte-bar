@@ -1,7 +1,5 @@
 <script>
-    export let type;
-    export let name;
-    export let slug;
+    export let type, name, slug;
 </script>
 
 <li>
