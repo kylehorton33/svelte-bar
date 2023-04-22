@@ -1,6 +1,6 @@
 <script>
-	import { ImageLoader, InlineLoading } from 'carbon-components-svelte';
-
+	import ImageLoader from  'carbon-components-svelte/src/ImageLoader/ImageLoader.svelte';
+	import InlineLoading from 'carbon-components-svelte/src/InlineLoading/InlineLoading.svelte';
 	// @ts-nocheck
 
 	/** @type {import('./$types').PageData} */
