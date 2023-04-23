@@ -15,4 +15,5 @@
 		<ListItem link="/ingredient/{slug}" {name} />
 		{/if}
 	{/each}
+	<ListItem link="/ingredient/add" name="add new ingredient" />
 </ul>
