@@ -1,6 +1,7 @@
 <script>
 	import { Form, TextInput, NumberInput, Button, Slider, FileUploader } from 'carbon-components-svelte';
     import { createNewIngredient } from '$lib/utils/api';
+    import { goto } from '$app/navigation';
 
     let name = '';
     let volume = 750;
@@ -16,7 +17,9 @@
                 volume,
                 quantityRemaining,
                 imageName
-            }, image)
+            }, image).then(() => {
+                goto('/');
+            })
         } else {
             console.log('Complete all fields before submit');
         }
