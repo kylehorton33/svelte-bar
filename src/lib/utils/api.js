@@ -44,7 +44,7 @@ export async function getIngredientBySlug(slug) {
  */
 // Return image by slug
 export async function getImageUrlBySlug(slug) {
-    const docRef = ref(storage, `images/${slug}.jpeg`)
+    const docRef = ref(storage, `images/${slug}`)
     const URL = await getDownloadURL(docRef);
     return URL;
 }
