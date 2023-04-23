@@ -8,8 +8,7 @@
 
 	let imagePath = data.imageURL;
 
-	let percentRemaining = data.quantityRemaining * 100;
-	$: volume = Math.round((percentRemaining * data.volume) / 1000) * 10;
+	$: volume = Math.round((data.quantityRemaining * data.volume) / 1000) * 10;
 </script>
 
 <div class="image-container">
@@ -37,7 +36,7 @@
 		type="range"
 		min="0"
 		max="100"
-		bind:value={percentRemaining}
+		bind:value={data.quantityRemaining}
 		class="slider"
 		id="quantity-slider"
 	/>
