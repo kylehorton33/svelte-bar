@@ -4,7 +4,6 @@ import { db, storage } from './firebase';
 // Import functions from SDKs
 import { collection, getDocs, doc, getDoc, setDoc } from 'firebase/firestore';
 import { ref, getDownloadURL, uploadBytes } from 'firebase/storage';
-import { async } from '@firebase/util';
 
 // Return all ingredients from Firestore
 export async function getAllIngredients() {
@@ -68,8 +67,8 @@ function slugify(name) {
         .toLowerCase()
         .trim()
         .replace(/[^\w\s-]/g, "")
-		.replace(/[\s_-]+/g, "-")
-		.replace(/^-+|-+$/g, "");
+        .replace(/[\s_-]+/g, "-")
+        .replace(/^-+|-+$/g, "");
 }
 
 // Create new ingredient
